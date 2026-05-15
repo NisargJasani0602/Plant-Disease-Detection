@@ -157,6 +157,13 @@ with st.sidebar:
         value=0.80,
         step=0.05
     )
+    st.divider()
+
+    st.header("Supported Classes")
+
+    for cls in class_name:
+        readable = cls.replace("___", " - ").replace("_", " ")
+        st.markdown(f"- {readable}")
 
 model = load_model()
 
